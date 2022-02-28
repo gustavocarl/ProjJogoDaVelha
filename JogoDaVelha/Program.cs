@@ -131,70 +131,124 @@ namespace JogoDaVelha
                 int coluna = 0;
                 if (quantidadeDeJogadas >= 4)
                 {
-                    if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha, coluna + 1]) == 0 && tabuleiro[linha, coluna].CompareTo(tabuleiro[linha, coluna + 2]) == 0)
+
+                    if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha, coluna + 1]) == 0 && tabuleiro[linha, coluna + 1].CompareTo(tabuleiro[linha, coluna + 2]) == 0)
                     {
                         if (tabuleiro[linha, coluna] == 'X')
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomePrimeiroJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("1");
                         }
-                        else if (tabuleiro[linha, coluna] == 'O')
+                        else
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomeSegundoJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("2");
+
                         }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
                     }
-                    else if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 1, coluna]) == 0 && tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 2, coluna]) == 0)
+                    //primeira linha
+                    else if (tabuleiro[linha + 1, coluna].CompareTo(tabuleiro[linha + 1, coluna + 1]) == 0 && tabuleiro[linha + 1, coluna + 1].CompareTo(tabuleiro[linha + 1, coluna + 2]) == 0)
                     {
-                        if (tabuleiro[linha, coluna] == 'X')
+                        if (tabuleiro[linha + 1, coluna] == 'X')
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomePrimeiroJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("1");
                         }
-                        else if (tabuleiro[linha, coluna] == 'O')
+                        else
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomeSegundoJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("2");
                         }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
                     }
-                    else if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 1, coluna + 1]) == 0 && tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 2, coluna + 2]) == 0)
+                    //segunda linha
+                    else if (tabuleiro[linha + 2, coluna].CompareTo(tabuleiro[linha + 2, coluna + 1]) == 0 && tabuleiro[linha + 2, coluna + 1].CompareTo(tabuleiro[linha + 2, coluna + 2]) == 0)
                     {
-                        if (tabuleiro[linha, coluna] == 'X')
+                        if (tabuleiro[linha + 2, coluna] == 'X')
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomePrimeiroJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("1");
                         }
-                        else if (tabuleiro[linha, coluna] == 'O')
+                        else
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomeSegundoJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("2");
                         }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
                     }
-                    else if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha, coluna + 2]) == 0 && (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 1, coluna + 1]) == 0) && (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 2, coluna]) == 0))
+                    //coluna zero
+                    else if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 1, coluna]) == 0 && tabuleiro[linha + 1, coluna].CompareTo(tabuleiro[linha + 2, coluna]) == 0)
                     {
                         if (tabuleiro[linha, coluna] == 'X')
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomePrimeiroJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("1");
                         }
-                        else if (tabuleiro[linha, coluna] == 'O')
+                        else
                         {
-                            Console.WriteLine($"Vitória do Jogador {nomeSegundoJogador}");
-                            quantidadeDeJogadas = 10;
-                            Console.ReadLine();
+                            Console.WriteLine("2");
                         }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
+                    }
+                    //primeira coluna
+                    else if (tabuleiro[linha, coluna + 2].CompareTo(tabuleiro[linha + 1, coluna + 2]) == 0 && tabuleiro[linha + 1, coluna + 2].CompareTo(tabuleiro[linha + 2, coluna + 2]) == 0)
+                    {
+                        if (tabuleiro[linha, coluna + 2] == 'X')
+                        {
+                            Console.WriteLine("1");
+                        }
+                        else
+                        {
+                            Console.WriteLine("2");
+                        }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
+                    }
+                    //segunda coluna
+                    else if (tabuleiro[linha, coluna + 1].CompareTo(tabuleiro[linha + 1, coluna + 1]) == 0 && tabuleiro[linha + 1, coluna + 1].CompareTo(tabuleiro[linha + 2, coluna + 1]) == 0)
+                    {
+                        if (tabuleiro[linha, coluna + 1] == 'X')
+                        {
+                            Console.WriteLine("1");
+                        }
+                        else
+                        {
+                            Console.WriteLine("2");
+                        }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
+                    }
+                    // Diagonal principal
+                    else if (tabuleiro[linha, coluna].CompareTo(tabuleiro[linha + 1, coluna + 1]) == 0 && tabuleiro[linha + 1, coluna + 1].CompareTo(tabuleiro[linha + 2, coluna + 2]) == 0)
+                    {
+                        if (tabuleiro[linha, coluna] == 'X')
+                        {
+                            Console.WriteLine("1");
+                        }
+                        else
+                        {
+                            Console.WriteLine("2");
+                        }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
+                    }
+                    // Diagonal segundario
+                    else if (tabuleiro[linha, coluna + 2].CompareTo(tabuleiro[linha + 1, coluna + 1]) == 0 && tabuleiro[linha + 1, coluna + 1].CompareTo(tabuleiro[linha + 2, coluna]) == 0)
+                    {
+                        if (tabuleiro[linha, coluna + 2] == 'X')
+                        {
+                            Console.WriteLine("1");
+                        }
+                        else
+                        {
+                            Console.WriteLine("2");
+                        }
+                        Console.ReadLine();
+                        quantidadeDeJogadas = 10;
                     }
                     else if (quantidadeDeJogadas > 8)
                     {
-                        Console.WriteLine("Empate");
+                        Console.WriteLine("0");
                         Console.ReadLine();
+                        quantidadeDeJogadas = 10;
                     }
                 }
             }
